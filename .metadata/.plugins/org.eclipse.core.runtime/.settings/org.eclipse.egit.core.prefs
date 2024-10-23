@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=D\:\\javaspringboottraining\\helloservice-docker\\.git;D\:\\bootdockeraws\\BootDockeraws\\.git;D\:\\javaspringboottraining\\helloservice-docker2\\.git;
+GitRepositoriesView.GitDirectories.relative=helloservice-docker\\.git;D\:\\bootdockeraws\\BootDockeraws\\.git;helloservice-docker2\\.git;
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

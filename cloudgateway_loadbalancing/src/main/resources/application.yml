@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: cloudgateway
+
+  cloud:
+    gateway:
+     routes:
+        - id: helloservice-route
+          uri: lb://HELLOSERVICE
+          predicates:
+            - Path=/rest/service/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: helloServiceCircuitBreaker
+                fallbackUri: forward:/myfallback
+                
+            
+            
+#        - id: factorialservice-route
+#          uri: http://localhost:8073
+#          predicates:
+#            - Path=/rest/factorialservice/**
+#            
+
+server:
+  port: 8072
+#management:
+#  endpoint:
+#    gateway:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health

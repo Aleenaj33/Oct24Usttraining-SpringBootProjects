@@ -1,0 +1,8 @@
+package com.ust.awslambda;
+
+public class TestLambda {
+	publuc String status() {
+		return "ok coresponding";
+	}
+
+}

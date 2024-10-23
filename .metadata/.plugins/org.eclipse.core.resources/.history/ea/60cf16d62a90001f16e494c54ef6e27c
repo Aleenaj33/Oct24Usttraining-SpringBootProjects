@@ -1,0 +1,8 @@
+package com.ust.awslambda;
+
+public class TestLambda {
+	public int status(int x,int y) {
+		return x*y;
+	}
+
+}

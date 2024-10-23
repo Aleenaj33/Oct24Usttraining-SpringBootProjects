@@ -1,0 +1,6 @@
+@GetMapping(value="/product/{id}",produces=MediaType.APPLICATION_JSON_VALUE)
+		public ResponseEntity<Product> getById(@PathVariable long id){
+			Optional<Product> optional=productsList.stream().filter(product->product.getProductId()==id).findFirst();
+			return ResponseEntity.status(HttpStatus.OK).body(optional.get());
+		}
+	
